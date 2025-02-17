@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 22px;
+}
+
+.left-section img {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.signup-box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    z-index: -1;
+    background: linear-gradient(45deg, #000000, #000000, #675f5f, #010101);
+    background-size: 300% 300%;
+    animation: glowAnimation 3s infinite linear;
+    filter: blur(10px);
+}
+
+@keyframes glowAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.signup-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.signup-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.signup-box input::placeholder {
+    color: white;
+}
+
+.terms {
+    font-size: 12px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.terms a {
+    color: #ffdf00;
+    text-decoration: none;
+}
+
+button {
+    background-color: #ffdf00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fefefe;
+}
+@keyframes glow {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.5)); }
+    50% { filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1)); }
+    100% { filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.5)); }
+}
+
+img {
+    animation: glow 2s infinite alternate;
+}
